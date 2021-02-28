@@ -629,6 +629,11 @@ label{
     overflow-y: scroll;
     }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 
 
 
