@@ -582,6 +582,7 @@ img{
   width: 80%
 }
 
+
 .col{
   background: transparent;
   padding: 10px;
@@ -590,6 +591,11 @@ img{
 .col p{
   text-align: center;
 }
+
+.col h5{
+  text-align: left;
+}
+
 
 label{
   color: #b2b2b2;
@@ -629,11 +635,11 @@ label{
     overflow-y: scroll;
     }
 
-video {
-  width: 100%;
-  height: auto;
-}
 
+video {
+      width: 100%;
+      height: auto;
+    }
 
 
 
@@ -729,8 +735,8 @@ video {
 }
 .timeline::before {
   content: "";
-  background: grey;
-  width: 5px;
+  background: #333333;
+  width: 4px;
   height: 95%;
   position: absolute;
   left: 50%;
@@ -829,7 +835,7 @@ video {
 
 blockquote {
   margin-top: 30px;
-  color: gery;
+  color: #696969;
   border-left-color: #E6E6E6;
   padding: 0 20px;
 }
