@@ -690,6 +690,12 @@ video {
   .primary-menu{
     display: flex;
   }
+  .project p{
+    letter-spacing: auto;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+  }
 
   .mobile-nav{
     position: fixed;
