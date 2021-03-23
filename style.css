@@ -697,6 +697,13 @@ video {
     text-align: left;
   }
 
+  .FullImg p{
+    font-size: 80%;
+    color: #696969;
+    text-align: center;
+    transition: all 0.35s;
+  }
+
   .mobile-nav{
     position: fixed;
     width: 100%;
