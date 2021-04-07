@@ -59,3 +59,16 @@ $(function(){
 
 
 });
+
+/*
+function checkPswd() {
+    var confirmPassword = "2021";
+    var password = document.getElementById("pswd").value;
+    if (password == confirmPassword) {
+         window.location="AmbientPC.html";
+    }
+    else{
+        alert("Passwords do not match.");
+    }
+}
+*/

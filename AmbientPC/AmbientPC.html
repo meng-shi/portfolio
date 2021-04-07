@@ -20,14 +20,24 @@
     <!--  favicon.ico and apple-touch-icon.png  -->
     <link rel="shortcut icon" href="../images/favicon.ico">
 
+
   </head>
 
   <body>
+
     <style>
       body {
         background: #FFFFFF;
       }
     </style>
+<!--
+    <form>
+        <label for="pswd">Enter your password: </label>
+        <input type="password" id="pswd">
+        <input type="button" value="Submit" onclick="checkPswd();" />
+    </form>
+-->
+
 
     <header>
       <div class="header-container">
@@ -66,17 +76,22 @@
             <a href="https://newsroom.intel.com/news/2019-computex-intel-open-house/"><img src="./images/AmbientPC.jpg" alt=""></a>
             <p><a href="https://newsroom.intel.com/news/2019-computex-intel-open-house/">Intel news room</a></p>
           </div>
+          <br><br><br><br>
+
+
 
           <h4>Background</h4>
+          <br>
 
           <div class="row-halves">
 
             <div class="col">
               <p>
-                TODAY<br>
-                Laptops: a non-interactive cuboid when closed.<br>
-                The lifetime of a laptop closed at least 10 hours a day<br>
-                How can we help user focus, create + connect when closed, to do their most important work?
+                Laptop VS Mobile<br>
+                Laptops: a non-interactive cuboid when its lid is closed.<br>
+                Mobile: a convenience device that always connects with user.<br>
+                When lid is closed, laptop has no interaction with human anymore.<br>
+                How can we make better use of our laptop computer?<br>
               </p>
 
             </div>
@@ -85,71 +100,117 @@
               <img src="./images/pc1.png" alt="normal pc">
             </div>
           </div>
-          <br>
-          <h5>Can we add a side screen to PC, and using that screen to connect users while laptop's lid is closed?</h5>
-          <br>
+          <h5>Can we add a second screen to the laptop, and using that screen to connect users while laptop's lid is closed?</h5>
+          <br><br><br><br>
 
 
-          <h4>Challenges</h4>
-          <div class="row-halves">
-            <div class="col">
-              <h5>Novel concept design with no prior art for determining</h5>
-            </div>
 
-            <div class="col">
-              <h5>Content selection and presentation</h5>
-            </div>
+          <h4>Who is user?</h4>
+
+            <div class="row-halves">
+
+              <div class="col">
+                <h4>Target User</h4>
+                <br>
+                <h5>Use PC laptop as primary productivity device<br><br>
+                    Use device in multiple locations (home, office, on-the-go) or
+                    have to walk to different conference rooms, parts of the
+                    office building throughout the day<br><br>
+                    Regularly multitask
+                </h5>
+              <br><br>
+
+
+              <h4>Main Use cases</h4>
+              <br>
+                <h5>
+                  Laptop lid is closed and user is working nearby <br><br>
+                  Laptop lid is closed and user walks with device in hand<br><br>
+                  Laptop lid is open and its main screen is on. <br><br>
+                </h5>
+              </div>
+
+
+              <div class="col">
+                <img src="./images/user4.png" alt="interview target user">
+                <p>
+                  Interview target users
+                </p>
+              </div>
+
           </div>
+          <br><br><br><br>
 
-          <div class="row-halves">
-            <div class="col">
-              <h5>Apply design with multimodal sensing and sense making technology</h5>
-            </div>
 
-            <div class="col">
-              <h5>Global collabration and development</h5>
-            </div>
-          </div>
+          <h4>UX/UI Design Challenges</h4>
+          <p>
+            Laptop with a secondary display is a novel concept with no prior art for determining
+          </p>
           <br>
 
+          <h5>
+            <li>What content will users want on it?</li><br>
+            <li>How to present content (both UI and interaction design)?</li><br>
+            <li>How to ensure users' security and privacy?</li><br>
+            <li>How to efficiently collabrate with global teams to find a solution?</li>
+          </h5>
+          <br><br><br><br>
 
-          <h4>About content selesction and presentation</h4>
 
 
-          <br>
+          <h4>Content selesction</h4>
 
-          <h5>First Question: How to simplify them?</h5>
+          <p>
+              Due to limited space of the second screen, it is important
+              to limit what should be displayed on it and how to use other
+              media such as sound to improve interaction.<br><br>
+              We used Eisenhower’s Urgent/Important  frameworks to better understand types of content best suited for second screen.<br><br>
+              Considering that the second screen has a more direct connection to the user,
+              work related Apps, which send important and urgent information are always our best choice, meeting notification/skype call need users’ attention immediately,
+              the second screen can help to achieve that.<br><br>
+              Based on user study, we also found brief attentional demand like media controller is also welcome. User like it when lid is open and the main screen is fully covered by other application,
+              a controller on the second screen which can be directly used to control media instead of interrupt the applications on the main screen is useful.<br><br>
+              Last but not least, users should be able to customize the second screen Apps to meet their specific needs: including selecting their interests, moving Apps in different order, altering colors, etc.
 
+          </p>
+          <br><br><br><br>
+
+          <h4>How to simplify the selected APP for second screen use?</h4>
+          <p>
+            Brainstorming, Analysis and Multiple prototyping iterations are the key elements. <br><br>
+          </p>
+
+
+
+          <h4>Brainstorming</h4>
           <div class="FullImg" id="">
             <img src="./images/brainstorming.png" alt="brainstorming sketches">
             <p>Brainstorming</p>
             <br>
           </div>
 
-          <h5>Second Question: How much info should we put on the second screen?</h5>
+          <h4>Main design principle established during iterations:</h4>
+          <h5>
+            <li>Minimize number of buttons</li>
+            <li>Short focus time</li>
+            <li>Use of voice vs touch</li>
+            <li>Multiple environment usages</li>
+            <li>Single task-simple function</li>
+            <li>Adapt to personal preference</li>
+          </h5>
+          <br>
 
-          <div class="row-halves">
+          <p>
+            Let's use Google Calendar as an example to explain how we simplify an application for a small edge screen. <br>
+            The complete calendar application usually contains multiple items, yearly view, monthly view, daily view, etc.<br>
+            For second screen use, we minimized the number of clicks needed and only show the most important upcoming events. Provide voice input and automatically notification at the same time.
+          </p>
+          <br><br><br><br>
 
-            <div class="col">
-              <p>
-                <br>
-                Human fingertip: 8-10mm <br>
-                IOS recommends: 7mm<br>
-                Our limitation: screen height 3.6mm <br>
-                Our solution: 8mm gaps bewteen icons (9 maxima)<br>
-                Results: Accurate touch
-              </p>
-
-            </div>
-
-            <div class="col">
-              <img src="./images/iconSize.png" alt="The edge screen has 9 icons at max.">
-            </div>
-          </div>
 
           <h4>User Interface example</h4>
-          <p>Through brainstorming and qualitative user interview, we found that when lid is closed, work-related applications
-            such as Skype and Calendar become first-priority applications</p>
+          <p>Work-related applications such as Skype and Calendar display on the second screen.
+          </p>
           <br>
 
           <div class="FullImg" id="">
@@ -164,31 +225,40 @@
             <br>
           </div>
 
-            <p>Besides work-related applications, when PC's lid is open, a media controller on the second screen to
-              avoid interrupting main screen usage is welcome.</p>
+            <p>When PC's lid is open, a media controller such as Spotify is welcome.</p>
             <br>
           <div class="FullImg" id="">
             <img src="./images/Spotify.jpg" alt="edge screen spotify page">
             <p>Spotify</p>
             <br>
           </div>
+          <br><br><br><br>
 
           <h4>Collabration with teams around the world</h4>
+          <p>
+            Challenge is not only from visual side, bring an design from scratch to reality needs tons of work from both hardware and software teams.<br>
+            The issues we met during the development include but not limited to: dead pixel on screen, limited API info, wake up method, etc.<br>
+            Organizing weekly design sync up meeting with stakeholders is important to push the design forward.
+          </p>
 
           <section class="FullImg" id="">
-            <img src="./images/teamWorldwide.png" alt="Teams locations around the world">
+            <img src="./images/team.png" alt="Teams locations around the world">
+            <p>Our teams around the world</p>
           </section>
+          <br><br><br><br>
 
-          <h4>Ambient PC: Code name "Mohawk River" Prototype</h4>
+          <h4>Final Prototype: Ambient PC - Code name "Mohawk River"</h4>
+          <p>We delivered the Mohawk river functional prototype on time. It was demonstrated as on-stage presentation in Computex 2019. </p>
 
           <section class="FullImg" id="">
             <img src="./images/am13.png" alt="concept model">
           </section>
+          <br><br><br><br>
 
 
 
 
-          <h4>Connect user all the time</h4>
+          <h4>Use cases</h4>
 
           <div class="row-halves">
 
@@ -201,8 +271,9 @@
             </div>
 
           </div>
+          <br><br><br><br>
 
-          <h4>Demonstrated in Computex 2019</h4>
+          <h4>Photos from Computex 2019</h4>
 
           <div class="row-halves">
 
@@ -215,10 +286,11 @@
             </div>
 
           </div>
+          <br><br><br><br>
 
 
 
-          <h2>Press List</h2>
+          <h4>Press List</h4>
 
           <h6>
 
@@ -244,7 +316,7 @@
 
         </section>
 
-        <br></br>
+        <br></br><br><br>
 
 
 
