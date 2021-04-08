@@ -60,7 +60,47 @@
 
 
         <section class="project">
+          <video width=100% height=auto controls>
+            <source src="./videos/TangiblePlaySurfaceDemo_Small.mp4" type="video/mp4">
+          </video>
+          <br><br><br><br>
 
+
+          <h4>Background</h4>
+          <p>
+            Objects such as toys and storybooks play an important role in childhood learning,
+            not only helping teach the concept of physical interaction between objects
+            but also feeding and shaping the imagination. <br><br>
+            However, as technology becomes more pervasive, children are spending more of their play time on digital devices such as tablets.<br>
+            Touchscreen interfaces often provide beneficial learning but the importance of learning through making has been long recognized.<br>
+            Physical toy playing experience cannot be replaced.<br><br>
+            Can we use a robust, low-cost technology to open up more learning through making scenarios for young kids?
+          </p>
+          <br><br><br><br>
+
+
+          <h4>Key criterias for the technology used on toys</h4>
+          <h5>
+            <li>Safe for children</li>
+            <li>Durable</li>
+            <li>Reliable</li>
+            <li>Affordable</li>
+            <li>Low-power</li>
+            <li>Scalable</li>
+          </h5>
+          <br>
+          <p>
+            Differential magnetic and resistive have limited scalability. <br>
+            Camera-based tracking suffers from occlusion.<br>
+            Active radios in all toys is an option but requires more powered objects and additional component costs.<br>
+            Likewise, ultrasonic emissions can be used to track objects, but each object would need a powered microphone or sound emitter.<br><br>
+            Thus, RFID is our top choice!
+          </p>
+          <br><br><br><br>
+
+          <h4>RFID in toys</h4>
+          <p>We are exploring two toy prototypes designed to allow children to explore coding and storytelling.</p>
+          <br>
           <div class="row-halves">
 
             <div class="col">
@@ -74,75 +114,112 @@
             </div>
           </div>
 
-
-          <h4>Abstract</h4>
+          <h4>Code maker</h4>
           <p>
-              We present two approaches to sensing objects on a
-              surface, using passive Radio Frequency Identification
-              (RFID), and explain the application of this technology to
-              toy prototypes, Code Maker and Story Maker. In Code
-              Maker, we created a system with an RFID antenna
-              array on a robotic fire truck. The array senses RFIDembedded tiles as they are placed on the truck. Each
-              tile corresponds to a command that is executed by the
-              truck, directing to move, light up, and make sounds. In
-              Story Maker, RFID antennas are embedded in toys that
-              are placed on a mat, underlain with a two-dimensional
-              array of RFID tags. The toys report their position on the
-              mat, which triggers a scene in the story that
-              corresponds to the configuration of toys. We describe
-              the advantages of these RFID implementations as an
-              alternative to other approaches, such as resistive
-              sensing and hardware connectors.
+            We designed the code maker prototype to help children learn the basic concepts of programming.<br>
           </p>
-
-
-        <h4>Images</h4>
+          <br>
 
           <div class="row-halves">
 
             <div class="col">
-              <img src="./images/t2.png" alt="Lego firetruck">
+              <h5>
+              To control the firetruck,
+              children place a series of RFID-embedded “command tiles” on the side of the truck,
+              then press a button to cause the truck to execute the commands on the tiles.<br><br>
+              When the button is pressed,
+              the microcontroller reads the antenna array,
+              detecting the command tiles present,
+              then activates actuators on the firetruck.<br><br>
+              </h5>
+            </div>
 
+            <div class="col">
+              <img src="./images/t2.png" alt="Lego firetruck">
+              <p>Lego firetruck</p>
+            </div>
+          </div>
+          <br><br>
+
+          <div class="row-halves">
+
+            <div class="col">
+              <h5>
+                Code Maker includes an Android-based software user interface to allow children to compare tangible and
+                software-based approaches to accomplish the same functionality in the robotic firetruck. <br><br>
+                We used Goggle Blockly in the creation of an application,
+                which provides a simple user interface for laying out commands in a sequence. <br><br>
+                After children send the commands, the Android device,
+                sends the command set to the firetruck, which compiles and executes the instructions through the actuators.
+              </h5>
             </div>
 
             <div class="col">
               <img src="./images/c1.png" alt="software interface, a digital firetruck">
-
+              <p>Software interface of Code Maker/p>
             </div>
-
           </div>
+          <br><br>
 
+
+          <h4>Story maker</h4>
+
+          <p>
+            We designed the Story maker prototype to help children learn by creating stories.<br>
+          </p>
+          <br>
 
 
           <div class="row-halves">
+            <div class="col">
+              <h5>
+
+                We used “The Three Little Pigs” story as an example.<br><br>
+                This classic fable tells of three pigs who build three houses with three different materials.
+                When the Big Bad Wolf comes to eat the pigs, he tries to blow down each house. <br><br>
+                In the prototype the wolf and the houses have RFID readers,
+                and depending on the wolf’s proximity to a house,
+                the system plays a part of the story on a computer screen,
+                including associated text to help teach reading.
+              </5>
+            </div>
 
             <div class="col">
               <img src="./images/s1.png" alt="storyboard">
+              <p>Story maker storyboard</p>
             </div>
-
-            <div class="col">
-              <img src="./images/t8.png" alt="Mat with RFID tags embedded">
-            </div>
-
           </div>
-
+          <br><br>
 
 
           <div class="row-halves">
 
             <div class="col">
               <img src="./images/t10.png" alt="toy with RFID reader inside">
+              <p>Toy house with RFID reader inside</p>
             </div>
 
             <div class="col">
-              <img src="./images/t11.png" alt="toy with RFID reader inside">
+              <img src="./images/t8.png" alt="Mat with RFID tags embedded">
+              <p>Mat with RFID tags embedded</p>
             </div>
+
+            <div class="col">
+              <img src="./images/t13.png" alt="Wolf in proximity to yellow house triggers the next scene in the story">
+              <p>Wolf in proximity to yellow house triggers the next scene in the story</p>
+            </div>
+          </div>
+          <br><br>
+
+          <p>
+            More info can be found in <a href="https://dl.acm.org/doi/abs/10.1145/3170427.3186514"><u>paper</u></a>.
+          </p>
 
 
 
         </section>
 
-        <br></br>
+        <br><br><br><br>
 
 
 
