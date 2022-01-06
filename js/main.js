@@ -1,74 +1,79 @@
-function openNav() {
-  document.getElementById("Sidenav").style.width = "50%";
-  document.getElementById("mask").style.width = "50%";
-}
+$(document) .ready(function() {
+   /*Sidebar Menu*/
+   "use strict";
 
-function closeNav() {
-  document.getElementById("Sidenav").style.width = "0";
-  document.getElementById("mask").style.width = "0";
-}
+   /*Preloader*/
+   $(".preloader-wrap").delay(1500).fadeOut('slow');
 
-$(function(){
+   /*Navigation*/
+   $(function() {
+   $('a[href*="#"]:not([href="#"])').on('click', function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+   });
 
-  window.sr = ScrollReveal();
+  $(window).scroll(function() {
+    var nav = $('.navbar');
+    var top = 70;
+    if ($(window).scrollTop() >= top) {
 
-  if ($(window).width() < 768) {
+        nav.addClass('inbody');
 
-  	if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-  		$('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-  	}
+    } else {
+        nav.removeClass('inbody');
+    }
+  });
 
-  	sr.reveal('.js--fadeInRight', {
-	    origin: 'right',
-	    distance: '300px',
-	    easing: 'ease-in-out',
-	    duration: 800,
-	  });
+  $('body').scrollspy({ target: '.navbar-nav' })
 
-  } else {
+   // skills chart
+  $(document).ready(function(e) {
+  //var windowBottom = $(window).height();
+  var index=0;
+  $(document).scroll(function(){
+    var top = $('#skills').height()-$(window).scrollTop();
 
-  	sr.reveal('.js--fadeInLeft', {
-	    origin: 'left',
-	    distance: '300px',
-		  easing: 'ease-in-out',
-	    duration: 800,
-	  });
+    if(top<-300){
+      if(index==0){
 
-	  sr.reveal('.js--fadeInRight', {
-	    origin: 'right',
-	    distance: '300px',
-	    easing: 'ease-in-out',
-	    duration: 800,
-	  });
+        $('.chart').easyPieChart({
+          easing: 'easeOutBounce',
+          onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+          }
+        });
 
-  }
+        }
+      index++;
+    }
+  })
 
-  sr.reveal('.js--fadeInLeft', {
-	    origin: 'left',
-	    distance: '300px',
-		  easing: 'ease-in-out',
-	    duration: 800,
-	  });
+  });
 
-	  sr.reveal('.js--fadeInRight', {
-	    origin: 'right',
-	    distance: '300px',
-	    easing: 'ease-in-out',
-	    duration: 800,
-	  });
+  /*Swiper*/
+   var swiper = new Swiper('.swiper', {
+     autoplay: {
+      delay: 4000,
+    },
+   });
 
+
+
+   $(function() {
+      $('.selector').animatedHeadline({
+        animationType: 'rotate-2'
+      });
+   })
+
+   var filterizd = $('.items').filterizr({ })
 
 });
-
-/*
-function checkPswd() {
-    var confirmPassword = "2021";
-    var password = document.getElementById("pswd").value;
-    if (password == confirmPassword) {
-         window.location="AmbientPC.html";
-    }
-    else{
-        alert("Passwords do not match.");
-    }
-}
-*/
+});

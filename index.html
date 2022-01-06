@@ -1,122 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
+      <title>Meng Shi</title>
+      <!--  favicon.ico  -->
+      <link rel="shortcut icon" href="img/favicon.ico">
 
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/702f2f895a.js" crossorigin="anonymous"></script>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Main CSS -->
+      <link href="css/main.css" rel="stylesheet">
+      <!-- Pushy CSS -->
+      <link rel="stylesheet" href="css/pushy.css">
+      <!-- Font-Awesome CSs -->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/ionicons.min.css">
+      <!-- NORMALIZE CSS -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <!-- Magnific Popup CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <!-- Animated Headline CSs -->
+      <link rel="stylesheet" href="css/jquery.animatedheadline.css">
+      <link rel="stylesheet" href="css/swiper.min.css">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-    <title>Meng Shi</title>
-    <!--Google icons-->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-     <!--jQuery-->
-     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RTWLS3D65"></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
 
-     <!--  favicon.ico  -->
-     <link rel="shortcut icon" href="images/favicon.ico">
+         gtag('config', 'G-3RTWLS3D65');
+       </script>
 
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RTWLS3D65"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+       <!-- Import the component -->
+       <script type="module" src="https://unpkg.com/@google/model-viewer@1.6.0/dist/model-viewer.min.js"></script>
 
-        gtag('config', 'G-3RTWLS3D65');
-      </script>
 
-  </head>
-  <body>
-    <!--# header  -->
-    <header>
-      <div class="header-container">
-       <div class="brand">
-         <a href="index.html">MS</a>
-       </div>
-       <nav class="primary-menu" id="primary-menu">
-         <ul>
-           <li><a href="about.html">About Me</a></li>
-           <!--<li class="menu-button"><a href="portfolio.html">Projects</a></li>-->
-           <li ><a href="portfolio.html">Projects</a></li>
-           <!--<li><span class="button" onclick="openNav()"></span></li>-->
-         </ul>
-       </nav>
+
+   </head>
+   <body>
+
+      <!-- Preloader -->
+      <div class="preloader-wrap">
+         <div class="preloader">
+            <div class="lines">
+               <div class="line line-1"></div>
+               <div class="line line-2"></div>
+               <div class="line line-3"></div>
+            </div>
+         </div>
       </div>
-    </header>
-    <!--# end of header  -->
 
-    <div id="Sidenav" class="sidenav">
-      <span class="closebtn" onclick="closeNav()">&times;</span>
-      <a href="AmbientPC/AmbientPC.html">Ambient PC</a>
-      <a href="KidSpace/KidSpace.html">Kid Space</a>
-      <!--
-      <a href="KidSpace/KidSpace.html"><img src="./images/oscar.png" alt="Kid Space" class="center" ></a>
-    -->
-      <a href="MARIE/MARIE.html">MARIE</a>
-      <a href="SmartToys/SmartToys.html">Smart Toys</a>
-    </div>
-    <div id="mask" class="mask"></div>
+      <!-- Header Section -->
+      <div class="header-clip" id="header-clip">
+        <canvas id="particles"></canvas>
+         <div class="container">
+            <div class="row">
 
-    <!-- # end of mask sidenav -->
+               <!-- Navigation Sidebar -->
+<!--               <button class="menu-btn"><i class="fa fa-navicon"></i></button>
+               <nav class="pushy pushy-right" data-focus="#first-link">
+                  <div class="pushy-content">
+                     <ul>
+                        <li class="pushy-link"><a href="#header-clip">HOME</a></li>
+                        <li class="pushy-link"><a href="#about">ABOUT</a></li>
+                        <li class="pushy-link"><a href="#resume">RESUME</a></li>
+                        <li class="pushy-link"><a href="#work">WORK</a></li>
+                     </ul>
+                  </div>
+               </nav>
 
-    <!-- #intro section-->
-    <section id="brands-hero">
-     <div class="container">
-       <div class="section-title">
-         <div class="heading-holder">
-          <h1>A Design Journey about Future</h1>
-        </div>
-           <p>
-            Welcome! This is Meng Shi, a Senior Interaction Designer of the Human & AI Research Group, Intel Research Labs, since 2015.
-          </p>
-          <p>
-            It is a place full of innovation and creativity. We are targeting on 5-10 year future products. My focus is combining human centered design with AI technologies into smart space,
-            such as manufacturing space, child play space, etc. I am also exploring user research and prototyping areas.
-          </p>
-          <p>
-            Before entering Intel Labs, I got my Master's Degree from Carnegie Mellon University,Tangible Interaction Design Program advised by Aisling Kelliher
-            and dual Bachelor's Degree from Tsinghua University, Information Design and Economics.
-          </p>
-       </div>
-    </div>
-    </section>
-    <!-- #end of intro section -->
+-->
 
+                <!-- Navigation Sidebar -->
+                 <nav class="navbar fixed-top navbar-expand-lg">
+                    <div class="container-fluid">
+                       <a class="navbar-brand" href="index.html">MENG SHI</a>
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+                       </button>
+                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+                             <li class="nav-item">
+                                <a class="nav-link" href="#header">HOME</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="#about">ABOUT</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="#resume">RESUME</a>
+                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="#work">PROJECT</a>
+                             </li>
 
-  <!-- Import the 3d component -->
-      <script type="module" src="https://unpkg.com/@google/model-viewer@1.6.0/dist/model-viewer.min.js"></script>
-      <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-
-      <model-viewer
-        autoplay
-        auto-rotate camera-controls
-        camera-orbit="90deg 70deg 100m"
-        shadow-intensity="2"
-        camera-controls environment-image="images/venice_sunset_2k.hdr"
-        src="models/Sea1.glb"
-        alt="A 3D model of me (3d model) sit on island works as background">
-      </model-viewer>
-
-    <!--
-
-      <script type="module">
+                          </ul>
+                       </div>
+                    </div>
+                 </nav>
 
 
-        import * as THREE from 'three';
-        const scene = new THREE.Scene();
+               <!-- Site Overlay -->
+               <div class="site-overlay" id="header"></div>
+               <div class="header-wrapper">
+                  <div class="col-md-12 col-xs-12 text-center">
+                     <div class="selector">
+                        <h1 class="ah-headline">
+                           <span>I'm a </span>
+                              <span class="ah-words-wrapper">
+                              <b class="is-visible">DESIGNER</b>
+                              <b>PROTOTYPER</b>
+                              <b>RESEARCHER</b>
+                           </span>
+                        </h1>
+                     </div>
+                     <hr class="line">
+                     <h2>Enthusiasm for the future</h2>
+                  </div>
+
+               </div>
+
+
+               <!-- model viewer -->
+              <model-viewer src="models/Sea1.glb" alt="A 3D model" auto-rotate></model-viewer>
 
 
 
-      </script>
-    -->
+               <ul class="home-social">
+                  <li>
+                     <a href="https://scholar.google.com/citations?user=wLemVJ0AAAAJ&hl=en"><i class="fa fa-google"></i></a>
+                  </li>
+                  <li>
+                     <a href="https://dribbble.com/mengshi"><i class="fa fa-dribbble"></i></a>
+                  </li>
+                  <li>
+                     <a href="https://www.linkedin.com/in/mengshi91/"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                     <a href="mailto:shimeng09@gmail.com"><i class="fa fa-envelope"></i></a>
+                  </li>
+               </ul>
+               <div class="scrolldown">
+                  <a href="#about" class="scroll-icon smoothscroll">
+                  Learn More
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
 
-    <script src="js/main.js"></script>
 
-  </body>
 
+
+
+
+      <!-- About Section -->
+      <div class="about" id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-xs-12 text-center">
+                  <div class="userpic">
+                     <img src="img/meng_small.png" class="img-fluid" alt="avatar">
+                  </div>
+               </div>
+               <div class="col-lg-12 col-md-12 col-xs-12 text-center">
+                  <h4 class="title">About Me</h4>
+                  <hr class="line">
+                  <p class="title-text">Senior Interaction Designer, Intel Research Labs</p>
+               </div>
+               <div class="col-md-12 col-xs-12 text-center">
+                  <p class="bio-text">We are targeting on 3-5 year future products. My focus is combining human centered design with AI technologies into smart space,
+            such as manufacturing space, child play space, etc. I am also exploring user research and prototyping areas.<br>Before joining Intel Labs, I got my Master's Degree from Carnegie Mellon University, Tangible Interaction Design
+            and Bachelor's Degree from Tsinghua University.</p>
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Resume Section -->
+      <div class="resume" id="resume">
+         <div class="container">
+            <div class="row text-center">
+               <div class="col-lg-12 col-md-12 col-xs-12">
+                  <h4 class="title">My design journey</h4>
+                  <hr class="line">
+                  <p>PDF Resume <a href="https://meng-shi.github.io/resume/resume2021.pdf" target="_blank"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;</a></p>
+               </div>
+               <div class="col-lg-12">
+                  <ul class="resume-list">
+                     <li>
+                        <div class="timeline-image">
+                           <h4>Present <br>
+                              - <br>
+                              Dec 2019
+                           </h4>
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>Intel Labs</h4>
+                              <h4 class="subheading">Senior Interaction Designer</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p>Lead UI/UX design of Ambient PC, a novel PC prototype.</p>
+                              <p>Lead user experience design for MARIE (Multimodal Activity Recognition in Industrial Equipment)</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="timeline-inverted">
+                        <div class="timeline-image">
+                           <h4>Dec 2019 <br>
+                              - <br>
+                              Aug 2015
+                           </h4>
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>Intel Labs</h4>
+                              <h4 class="subheading">Interaction Designer</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p>Lead design for Kid Space, which creates a smart space for children using Mixed Reality</p>
+                              <p>Design for smart toys: Story Maker & Code Maker</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="timeline-image">
+                           <h4>May 2015 <br>
+                              - <br>
+                              Aug 2013
+                           </h4>
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>Carnegie Mellon University</h4>
+                              <h4 class="subheading">Tangible Interaction Design</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p>Focus on Tangible Interaction Design advised by Aisling Kelliher</p>
+                              <p>UX/UI Intern at University of Pittsburgh Medical Centre,Human Engineering Research Laboratories</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="timeline-inverted">
+                        <div class="timeline-image">
+                           <h4>Aug 2013 <br>
+                              - <br>
+                              Aug 2009
+                           </h4>
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>Tsinghua University</h4>
+                              <h4 class="subheading">Human Computer Interaction</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p>Graduate from Tsinghua University, Information Design Program with a Bachelor of Art degree, as well as a Bachelor of Economics dual degree.</p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Portfolio Section -->
+      <div class="work" id="work">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-xs-12 text-center">
+                  <h4 class="title">Projects</h4>
+                  <hr class="line">
+                <!--  <ul>
+
+                     <li class="borderFade" data-filter="all"> All </li>
+
+                     <li class="borderFade" data-filter="1"> AR/VR </li>
+
+                     <li class="borderFade" data-filter="2"> UX/UI </li>
+
+                     <li class="borderFade" data-filter="3"> Prototype </li>
+
+                  </ul>-->
+               </div>
+               <div class="col-md-12 col-xs-12">
+                  <div class="items">
+                     <div class="col-md-6 filtr-item" data-category="2, 3" data-sort="value">
+                              
+                        <a href="AmbientPC/AmbientPC.html">
+                           <div class="portfolio-thumb">
+                              <img src="img/MohawkRiver1.png" class="img-fluid" alt="project">
+                              <div class="portfolio-overlay">
+                                 <div class="portfolio-item">
+                                    <h3>Ambient PC</h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                           
+                     </div>
+                        
+                     <div class="col-md-6 filtr-item" data-category="2, 1" data-sort="value">
+                              
+                        <a href="KidSpace/KidSpace.html">
+                           <div class="portfolio-thumb">
+                              <img src="img/kidspace.png" class="img-fluid" alt="project">
+                              <div class="portfolio-overlay">
+                                 <div class="portfolio-item">
+                                    <h3>Kid Space</h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                           
+                     </div>
+                        
+                     <div class="col-md-6 filtr-item" data-category="2, 3" data-sort="value">
+                              
+                        <a href="SmartToys/SmartToys.html">
+                           <div class="portfolio-thumb">
+                              <img src="img/TangiblePlaySurface.png" class="img-fluid" alt="project">
+                              <div class="portfolio-overlay">
+                                 <div class="portfolio-item">
+                                    <h3>Smart Toys</h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                           
+                     </div>
+                     <div class="col-md-6 filtr-item" data-category="3" data-sort="value">
+                              
+                        <a href="HomeRehab/HomeRehab.html">
+                           <div class="portfolio-thumb">
+                              <img src="img/HomeRehab.jpg" class="img-fluid" alt="project">
+                              <div class="portfolio-overlay">
+                                 <div class="portfolio-item">
+                                    <h3>Home Rehab</h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                           
+                     </div>
+
+                        
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Footer Section -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-xs-12 text-center">
+                  <h4>&copy 2021 | Meng Shi</h4>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/common.js"></script>
+      <script src="js/particles.js"></script>
+      <script src="js/particles-custom.js"></script>
+      <script src="js/easypiechart.js"></script>
+      <script src="js/pushy.min.js"></script>
+      <script src="js/swiper.min.js"></script>
+      <script src="js/jquery.animatedheadline.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/jquery.filterizr.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
 </html>
