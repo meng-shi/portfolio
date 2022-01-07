@@ -1719,16 +1719,16 @@ footer h4 {
     }
 
 
-    .col{
+    .row-halves .col{
       background: transparent;
       padding: 10px;
     }
 
-    .col p{
+    .row-halves .col p{
       text-align: center;
     }
 
-    .col h5{
+    .row-halves .col h5{
       text-align: left;
     }
 
@@ -1828,8 +1828,8 @@ footer h4 {
 
   }
 
-    .FullImg p{
-    font-size: 80%;
+    .project .FullImg p{
+    font-size: 90%;
     color: #696969;
     text-align: center;
     transition: all 0.35s;
