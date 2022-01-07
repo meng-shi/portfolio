@@ -1839,7 +1839,6 @@ footer h4 {
     transition: all 0.35s;
   }
 
-  .about,
   .portfolio,
   .contact,
   .project,
@@ -1851,7 +1850,6 @@ footer h4 {
     color: #696969;
   }
 
-  .about h2,
   .portfolio h2,
   .contact h2,
   .project h2{
