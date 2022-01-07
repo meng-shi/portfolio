@@ -50,6 +50,7 @@
    <body>
 
       <!-- Preloader -->
+
       <div class="preloader-wrap">
          <div class="preloader">
             <div class="lines">
@@ -59,6 +60,8 @@
             </div>
          </div>
       </div>
+
+
 
       <!-- Header Section -->
       <div class="header-clip" id="header-clip">
@@ -130,8 +133,14 @@
                </div>
 
 
-               <!-- model viewer -->
-              <model-viewer src="models/Sea1.glb" alt="A 3D model" auto-rotate></model-viewer>
+               <!-- model viewer
+              <model-viewer src="models/Sea1.glb" alt="A 3D model" auto-rotate></model-viewer>  -->
+
+              <model-viewer id="reveal" loading="eager" bounds="tight" src="models/Sea1.glb" alt="A 3D model" poster="img/poster.webp" camera-orbit="183deg 71.5deg auto" auto-rotate>
+                  <div class="progress-bar hide" slot="progress-bar">
+                  </div>
+              </model-viewer>
+
 
 
 

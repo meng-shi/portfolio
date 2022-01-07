@@ -1695,6 +1695,10 @@ footer h4 {
         height: 30%;
       }
 
+      model-viewer#reveal {
+        --poster-color: transparent;
+      }
+
 
 
 /*#############  styling project section   ################*/
