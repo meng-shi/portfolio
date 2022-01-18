@@ -51,11 +51,10 @@ body {
 
 /******** TYPOGRAPHY SECTION START ********/
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2pt;
 }
-
 
 p {
     font-weight: 300;
@@ -1728,11 +1727,11 @@ footer h4 {
       padding: 10px;
     }
 
-    .row-halves .col p{
+    .row-halves .col h5{
       text-align: center;
     }
 
-    .row-halves .col h5{
+    .row-halves .col p{
       text-align: left;
     }
 
